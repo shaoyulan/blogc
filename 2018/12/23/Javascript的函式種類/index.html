@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        為甚麼寫部落格? WHY Bloging?｜ShaoYu&#39;s blog
+        Javascript的函式種類｜ShaoYu&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://shaoyulan.github.io/blogc/2018/11/19/Tags/">
+    <link rel="canonical" href="https://shaoyulan.github.io/blogc/2018/12/23/Javascript的函式種類/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blogc/css/bootstrap.min.css">
@@ -136,17 +136,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>為甚麼寫部落格? WHY Bloging?</h1>
+                    <h1>Javascript的函式種類</h1>
                     
                     <span class="meta">
                          作者 Shaoyu
                         <span>
-                          日期 2018-11-19
+                          日期 2018-12-23
                          </span>
                     </span>
                     <div class="tags text-center">
-                        
-                        <a class="tag" href="/blogc/tags/#前端,網頁" title="前端,網頁">前端,網頁</a>
                         
                     </div>
                 </div>
@@ -155,7 +153,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            為甚麼寫部落格? WHY Bloging?
+            Javascript的函式種類
         </span>
     </div>
 </header>
@@ -166,25 +164,26 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="記錄一切，最初的起頭"><a href="#記錄一切，最初的起頭" class="headerlink" title="記錄一切，最初的起頭"></a>記錄一切，最初的起頭</h2><h4 id="To-document-everything-the-very-beginning"><a href="#To-document-everything-the-very-beginning" class="headerlink" title="To document everything, the very beginning."></a>To document everything, the very beginning.</h4><p>這裡我會留下一切關於我在這條道路上的種種，這一切如何開始的、<br>過程是怎樣的，遇到了哪些挑戰與分享我最得意的成就。</p>
-<h2 id="不做重複的事，時光珍貴"><a href="#不做重複的事，時光珍貴" class="headerlink" title="不做重複的事，時光珍貴"></a>不做重複的事，時光珍貴</h2><h4 id="No-repaeating-time-is-precious"><a href="#No-repaeating-time-is-precious" class="headerlink" title="No repaeating, time is precious."></a>No repaeating, time is precious.</h4><p>重複讓人喪氣，把時間花在最重要的事情上。<br>把每分的專注用來致敬逝去的生命!</p>
-<blockquote>
-<p>我看過日光之下所發生的一切事，不料，<br>一切都是虛空，都是捕風。 -傳道書 1:14</p>
-</blockquote>
-<h2 id="留下現時的模樣，就蠢一次吧"><a href="#留下現時的模樣，就蠢一次吧" class="headerlink" title="留下現時的模樣，就蠢一次吧"></a>留下現時的模樣，就蠢一次吧</h2><h4 id="Be-foolish-and-become-stupendous"><a href="#Be-foolish-and-become-stupendous" class="headerlink" title="Be foolish, and become stupendous."></a>Be foolish, and become stupendous.</h4><p>我要記錄我的蠢，第一次總是困難的，留下記錄用來記錄我的成長。</p>
+                <p>今天要來介紹Js的函式，以下分別會介紹</p>
+<ul>
+<li>命名函式</li>
+<li>匿名函式</li>
+<li>立即執行函式(IIFE)</li>
+</ul>
+<h2 id="命名函式"><a href="#命名函式" class="headerlink" title="命名函式"></a>命名函式</h2><p>命名函式，就是<strong>有取名字</strong>的函式，為了要建立一個基本的命名函式，我們要先做<strong>函式宣告</strong>(劇本啦!)，在宣告時指定名稱，等到之後需要用到了可以直接以函式名稱來呼叫(下命令)，以下示範如何宣告一個命名函式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 畫圖(<span class="params">主題,大小</span>)</span>&#123;</span><br><span class="line">	retrun <span class="string">"收到命令："</span>+主題+大小;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> 回應 = 畫圖(風景,A4);</span><br></pre></td></tr></table></figure></p>
+<h2 id="匿名函式-函式運算式"><a href="#匿名函式-函式運算式" class="headerlink" title="匿名函式(函式運算式)"></a>匿名函式(函式運算式)</h2><p>匿名函式，就是<strong>沒特別取名字</strong>的函式，匿名函式也稱作<strong>函式運算式</strong>(很多名稱對吧!)，<br>這種函式在Javascript的解釋器讀到這些指令時，是沒辦法呼叫函式的名稱來執行命令的。<br>換句話說，必須要遵守先建立函式，而後呼叫的順序才行(沒錯，命名函式可以先呼叫後定義喔!)<br>以下是匿名函式的範例程式碼：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 畫圖 = <span class="function"><span class="keyword">function</span>(<span class="params">主題,大小</span>)</span>&#123;</span><br><span class="line">	retrun <span class="string">"收到命令："</span>+主題+大小;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> 回應 = 畫圖(風景,A4);</span><br></pre></td></tr></table></figure></p>
+<p>可以發現其實呼叫的方式是一樣的，而差別就在<strong>匿名函式</strong>的function後並沒有命名，而是剩下傳入參數的位置。</p>
+<h2 id="立即執行函式-IIFE"><a href="#立即執行函式-IIFE" class="headerlink" title="立即執行函式(IIFE)"></a>立即執行函式(IIFE)</h2><p>立即執行函式同樣<strong>沒有取名</strong>，同樣要等到Javascript解釋器讀到之後才能呼叫執行，以下就<br>直接來個範例程式碼吧：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 畫圖 = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	主題 = <span class="string">'風景'</span>;</span><br><span class="line">	大小 = <span class="string">'A4'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"收到命令："</span>+主題+大小;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></p>
+<p>有沒有注意到，整個函式是由一組括號給包起來的，這是為了要確保Javascript的解釋器會<br>把整個函式當作一體(避免誤判而出錯)。還有一組括號有發現嗎?最後端的括號，<br>是為了要讓Javascript解釋器知道請<strong>立即執行</strong>這個函式用的喔! </p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/blogc/2018/12/23/Javascript的函式種類/" data-toggle="tooltip" data-placement="top" title="Javascript的函式種類">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/blogc/2018/11/18/讓我們開始新的旅程吧/" data-toggle="tooltip" data-placement="top" title="讓我們開始新的旅程吧">Next Post &rarr;</a>
+                        <a href="/blogc/2018/11/19/Tags/" data-toggle="tooltip" data-placement="top" title="為甚麼寫部落格? WHY Bloging?">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -203,7 +202,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#記錄一切，最初的起頭"><span class="toc-text">記錄一切，最初的起頭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#To-document-everything-the-very-beginning"><span class="toc-text">To document everything, the very beginning.</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#不做重複的事，時光珍貴"><span class="toc-text">不做重複的事，時光珍貴</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#No-repaeating-time-is-precious"><span class="toc-text">No repaeating, time is precious.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#留下現時的模樣，就蠢一次吧"><span class="toc-text">留下現時的模樣，就蠢一次吧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Be-foolish-and-become-stupendous"><span class="toc-text">Be foolish, and become stupendous.</span></a></li></ol></li>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#命名函式"><span class="toc-text">命名函式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名函式-函式運算式"><span class="toc-text">匿名函式(函式運算式)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#立即執行函式-IIFE"><span class="toc-text">立即執行函式(IIFE)</span></a></li></ol>
                 </div>
             </div>
         </div>
